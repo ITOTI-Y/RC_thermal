@@ -32,10 +32,14 @@ df_T = pd.read_csv('data/T_amb.csv', header=None)       # 辐射体温度/环境
 df_e = pd.read_csv('data/cooler.csv', header=None)        # 辐射体发射率
 df_a = pd.read_csv('data/cooler.csv', header=None)        # 辐射体吸收率
 df_cc = pd.read_csv('data/cc.csv', header=None)        # 云层覆盖率
-df_trans = pd.read_csv('data/trans.csv', header=None)  
+df_trans = pd.read_csv('data/trans.csv', header=None)  # 太阳辐射透过率
+df_g = pd.read_csv('data/G.csv', header=None)       # 太阳辐射
+df_v = pd.read_csv('data/V_wind.csv', header=None)  # 大气风速
 
 # 单独计算平衡方程中的各个值
-P_rad(),P_atm(),E_rad(),E_atm()
+P_rad(),P_atm(),P_bld(),P_solar(),P_loss()
+
+E_rad(),E_atm(),E_bld(),E_solar(),E_loss()
 ```
 ## 📜 License
 
